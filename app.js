@@ -16,6 +16,8 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.use("/", require("./app/routes/department.route"));
+
 app.listen(port, () => {
   console.log(`Server is listening on ${port}`);
 });
